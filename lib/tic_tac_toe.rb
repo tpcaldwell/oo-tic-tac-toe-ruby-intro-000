@@ -28,7 +28,10 @@ WIN_COMBINATIONS = [
   [0,4,8],
   [2,4,6]
 ]
-end
+
 def input_to_index(user_input)
   user_input.to_i - 1
 end
+
+end
+
