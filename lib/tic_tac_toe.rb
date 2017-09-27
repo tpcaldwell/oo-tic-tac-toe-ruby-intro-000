@@ -53,6 +53,22 @@ def turn
   end
 end
 
+def won?
+      combo = 0
+      while combo < WIN_COMBINATIONS.length
+        current_combo = WIN_COMBINATIONS[combo]
+
+        win1 = current_combo.all? { |position| @board[position] == "X" }
+        win2 = current_combo.all? { |position| @board[position] == "O" }
+
+        if win1 == true || win2 == true
+          return current_combo
+        else
+         false
+        end
+
+        combo += 1
+      end
 
 
 
