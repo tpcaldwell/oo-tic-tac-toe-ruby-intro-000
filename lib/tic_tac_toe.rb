@@ -70,6 +70,45 @@ def won?
         combo += 1
       end
 end
+def full?
+    @board.all? do |i|
+      i == "X" || i == "O"
+    end
+  end
+
+  def draw?
+    if !won? && full?
+      return true
+    else
+      return false
+    end
+  end
+
+  def over?
+        if draw? || won?
+      return true
+    else return false
+    end
+  end
+
+  def winner
+    winner = won?
+    if winner != nil
+      return @board[winner[0]]
+    end
+  end
+
+  def play
+  until over?
+    turn
+    end
+  if winner == "X"
+    puts "Congratulations X!"
+  elsif winner == "O"
+    puts "Congratulations O!"
+  else
+    puts "Cat's Game!"
+  end
 
 
 end
