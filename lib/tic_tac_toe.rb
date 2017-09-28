@@ -68,9 +68,7 @@ def won?
 
         combo += 1
       end
-
-
-
 end
 
 
+end
