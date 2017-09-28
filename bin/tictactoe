@@ -5,5 +5,3 @@ puts "Welcome to Tic Tac Toe!"
 TicTacToe
 
 # Make sure to execute #play below
-
-
