@@ -88,4 +88,11 @@ def over?
   else return false
   end
 end
+def winner
+    winner = won?
+    if winner != nil
+      return board[winner[0]]
+    end
+  end
+
 end
